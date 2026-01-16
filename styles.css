@@ -94,8 +94,7 @@ body {
   box-sizing: border-box;
 }
 
-h2,
-h3 {
+h2 {
   color: #ffffff;
   margin-bottom: 15px;
   padding-bottom: 5px;
@@ -676,6 +675,50 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #000;
+  color: #000000;
   font-size: 14px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.services__card-name {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.services__inner-card {
+  background-color: #b8976f;
+  border: 1px solid #a67c52;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.services__inner-card:hover {
+  transform: scale(1.02);
+}
+
+.services__inner-card-icon {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.services__inner-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
