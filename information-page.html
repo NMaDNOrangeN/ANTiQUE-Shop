@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ANTiQUE Shop - Информация</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/javascript/search.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -24,12 +25,32 @@
       </nav>
 
       <div class="controls">
-        <a href="#">
+        <a href="javascript:void(0)" id="search-btn">
           <img src="images/Search.png" alt="Search" />
         </a>
         <a href="shopping-cart-page.html">
           <img src="images/Cart.png" alt="Cart" />
         </a>
+      </div>
+
+      <div id="search-modal" class="search-overlay">
+        <div class="search-modal-content">
+          <span class="close-search">&times;</span>
+
+          <div class="search-capsule">
+            <div class="search-white-field">
+              <input
+                type="text"
+                placeholder="Поиск..."
+                class="search-input"
+                autofocus
+              />
+            </div>
+            <button type="submit" class="search-submit">
+              <img src="images/Search.png" alt="Найти" />
+            </button>
+          </div>
+        </div>
       </div>
     </header>
 
