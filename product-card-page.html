@@ -33,62 +33,80 @@
       </div>
     </header>
 
-    <div class="container">
-      <div class="product-detail">
+    <main class="container">
+      <section class="product-detail">
         <div class="product-gallery">
-          <img
-            src="https://via.placeholder.com/600x400?text=Main+Typewriter"
-            alt="Main Image"
-            class="main-image"
-          />
+          <div class="main-image">
+            <img src="images/machine.png" alt="Старая пишущая машинка" />
+          </div>
+
           <div class="thumbnails">
-            <img src="https://via.placeholder.com/100?text=1" class="thumb" />
-            <img src="https://via.placeholder.com/100?text=2" class="thumb" />
-            <img src="https://via.placeholder.com/100?text=3" class="thumb" />
-            <img src="https://via.placeholder.com/100?text=4" class="thumb" />
+            <img src="images/machine.png" alt="thumb 1" />
+            <img src="images/machine.png" alt="thumb 2" />
+            <img src="images/machine.png" alt="thumb 3" />
+            <img src="images/machine.png" alt="thumb 4" />
           </div>
         </div>
 
         <div class="product-info">
           <h1 class="product-title">Старая пишущая машинка</h1>
-          <p class="product-year">1854 год</p>
-          <p class="product-desc">
+
+          <div class="product-meta">
+            <span class="year">1854 год</span>
+            <span class="category">Пишущие машинки</span>
+          </div>
+
+          <p class="product-description">
             Пишущая машинка, сделанная в 1854 году известным художником и
             предпринимателем во Франции. Несет в себе великую историю, что
-            делает ее уникальным предметом для вашей коллекции.
+            делает её уникальным предметом для коллекционеров и ценителей
+            антиквариата.
           </p>
-          <div class="actions">
+
+          <div class="product-price">500 000 ₽</div>
+
+          <div class="product-actions">
             <button class="btn-buy">Купить сейчас</button>
-            <button class="btn-cart-icon">
-              <img
-                src="images/Cart.png"
-                style="filter: invert(1)"
-                alt="Add to Cart"
-              />
+            <button class="btn-cart" aria-label="Добавить в корзину">
+              <img src="images/Cart.png" alt="Cart" />
             </button>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">
-          <h4>О компании</h4>
-          <p>
-            Мы занимаемся продажей антиквариата с 2025 год. Все наши предметы
-            проходят проверку подлиности.
-          </p>
+          <div class="footer-item">
+            <span class="footer-label">О компании</span>
+            <div class="footer-content">
+              <span class="bubble">
+                Мы занимаемся продажей антиквариата с 2025 года. Все наши
+                предметы проходят проверку подлинности.
+              </span>
+            </div>
+          </div>
         </div>
+
         <div class="footer-column">
-          <h4>Время работы</h4>
-          <p>Пн-Пт с 10:00 - 22:00</p>
-          <p>Сб-Вс с 10:00 - 18:00</p>
+          <div class="footer-item">
+            <span class="footer-label">Время работы</span>
+            <div class="footer-content">
+              <span class="bubble">Пн-Пт с 10:00 - 22:00</span>
+              <span class="bubble">Сб-Вс с 10:00 - 18:00</span>
+            </div>
+          </div>
         </div>
+
         <div class="footer-column">
-          <h4>Контакты</h4>
-          <p>+7 9005553555</p>
-          <p>info@mail.com</p>
+          <div class="footer-item">
+            <span class="footer-label">Контакты</span>
+            <div class="footer-content">
+              <span class="bubble">+7 900 555 35 55</span>
+              <span class="bubble">info@mail.com</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
