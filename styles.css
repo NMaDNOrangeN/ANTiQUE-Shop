@@ -723,7 +723,8 @@ a:hover {
   display: block;
 }
 
-.info-section {
+.info-section,
+.contacts-section {
   padding: 20px 0 60px;
 }
 
@@ -782,4 +783,34 @@ a:hover {
   border-radius: 10px;
   font-weight: bold;
   font-size: 16px;
+}
+
+.contacts-content {
+  margin: 0 -20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.contacts-content__background {
+  background: #b8976f;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contacts-content__background:hover {
+  opacity: 0.7;
+}
+
+.contacts-content img {
+  width: 300px;
+  height: auto;
+  display: block;
 }
