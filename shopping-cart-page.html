@@ -34,74 +34,91 @@
     </header>
 
     <div class="container">
-      <h2>Корзина</h2>
+      <h2 class="page-title">Корзина</h2>
+
       <div class="cart-layout">
         <div class="cart-items">
           <div class="cart-item">
-            <img
-              src="https://via.placeholder.com/150x100?text=Item+1"
-              alt="Товар"
-            />
-            <div class="item-details">
-              <h4>Машинка №1</h4>
-              <p>1 000 000 ₽</p>
+            <div class="cart-item__content">
+              <div class="cart-item__image">
+                <img src="images/machine.png" alt="Товар" />
+              </div>
+              <div class="cart-item__details">
+                <h4>Машинка №1</h4>
+                <p class="price">1 000 000 ₽</p>
+              </div>
+            </div>
+            <div class="cart-item__checkbox">
+              <input type="checkbox" />
             </div>
           </div>
+
           <div class="cart-item">
-            <img
-              src="https://via.placeholder.com/150x100?text=Item+2"
-              alt="Товар"
-            />
-            <div class="item-details">
-              <h4>Машинка №2</h4>
-              <p>500 000 ₽</p>
+            <div class="cart-item__content">
+              <div class="cart-item__image">
+                <img src="images/machine.png" alt="Товар" />
+              </div>
+              <div class="cart-item__details">
+                <h4>Машинка №2</h4>
+                <p class="price">500 000 ₽</p>
+              </div>
+            </div>
+            <div class="cart-item__checkbox">
+              <input type="checkbox" checked />
             </div>
           </div>
         </div>
 
-        <div class="cart-sidebar">
-          <h3>Оформление</h3>
-          <form class="checkout-form">
-            <h4>Адрес доставки</h4>
-            <input
-              type="text"
-              placeholder="г. Москва, ул. Пушкина..."
-              style="
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 20px;
-                background: #222;
-                border: 1px solid #a67c52;
-                color: white;
-              "
-            />
+        <div class="cart-summary-wrapper">
+          <div class="cart-sidebar">
+            <h3>Доставка</h3>
+            <form class="checkout-form">
+              <div class="form-group">
+                <label class="form-label">Адрес доставки</label>
+                <input
+                  type="text"
+                  class="input-field"
+                  placeholder="г. Москва, ул. Пушкина..."
+                />
+              </div>
 
-            <h4>Способ доставки</h4>
-            <label
-              ><input type="radio" name="delivery" checked /> Самовывоз</label
-            >
-            <label
-              ><input type="radio" name="delivery" /> Доставка курьером</label
-            >
+              <div class="form-group">
+                <label class="form-label">Способ доставки</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="delivery" checked />
+                    <span>Самовывоз</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="delivery" />
+                    <span>Доставка курьером</span>
+                  </label>
+                </div>
+              </div>
 
-            <br />
-            <h4>Оплата</h4>
-            <label
-              ><input type="radio" name="payment" checked /> При
-              получении</label
-            >
-            <label><input type="radio" name="payment" /> Онлайн (Сразу)</label>
+              <div class="form-group">
+                <label class="form-label">Оплата</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="payment" checked />
+                    <span>При получении</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="payment" />
+                    <span>Онлайн (Сразу)</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
 
-            <div class="total-price">Сумма: 1 500 000 ₽</div>
-
-            <button
-              type="button"
-              class="btn-buy"
-              style="width: 100%; font-size: 18px"
-            >
-              Купить
-            </button>
-          </form>
+          <div class="cart-footer-row">
+            <div class="total-price">
+              <div class="total-price__text">Сумма:</div>
+              <div class="total-price__amount">500 000 ₽</div>
+            </div>
+            <button type="button" class="btn-buy">Купить</button>
+          </div>
         </div>
       </div>
     </div>
