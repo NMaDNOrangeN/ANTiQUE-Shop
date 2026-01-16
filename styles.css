@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. ШРИФТЫ И ОБЩИЕ СБРОСЫ
+   ========================================================================== */
 @font-face {
   font-family: "Gabriela";
   src: url("../fonts/Gabriela-Regular.ttf");
@@ -26,6 +29,15 @@ body {
   line-height: 1.6;
 }
 
+.container {
+  flex: 1;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
 .line {
   background-color: rgba(47, 47, 47, 1);
   height: 6px;
@@ -35,6 +47,29 @@ body {
   display: block;
 }
 
+a {
+  color: #f0e6d2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d4af37;
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a67c52;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   2. ШАПКА (HEADER)
+   ========================================================================== */
 .header {
   display: flex;
   justify-content: space-between;
@@ -85,35 +120,9 @@ body {
   width: 70px;
 }
 
-.container {
-  flex: 1;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
-  box-sizing: border-box;
-}
-
-h2 {
-  color: #ffffff;
-  margin-bottom: 15px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #a67c52;
-}
-
-p {
-  margin-bottom: 15px;
-}
-
-a {
-  color: #f0e6d2;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #d4af37;
-}
-
+/* ==========================================================================
+   3. ГЛАВНАЯ СТРАНИЦА (О НАС / СЕКЦИИ)
+   ========================================================================== */
 .about-section {
   margin: 200px auto;
   width: 90%;
@@ -128,14 +137,11 @@ a:hover {
 .about-section h2 {
   margin: 0 auto 30px auto;
   padding: 10px 30px;
-
   color: #000000;
   font-size: 36px;
   font-weight: 700;
-
   border-radius: 20px;
   background: rgba(184, 151, 111, 1);
-
   display: inline-block;
 }
 
@@ -149,8 +155,65 @@ a:hover {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
-
   text-align: center;
+}
+
+/* ==========================================================================
+   4. КАРТОЧКИ ТОВАРОВ И СЕТКИ (GRID)
+   ========================================================================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.product-grid-catalog {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.product-card {
+  background-color: #b8976f;
+  border: 1px solid #a67c52;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background-color: #777;
+}
+
+.product-card h4 {
+  color: #000000;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  border: none;
+  padding: 0;
+}
+
+.product-card .price {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #000000;
+}
+
+.product-label {
+  color: #000000;
 }
 
 .popular-section .product-card,
@@ -186,61 +249,6 @@ a:hover {
   color: #000000;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.product-card {
-  background-color: #b8976f;
-  border: 1px solid #a67c52;
-  border-radius: 5px;
-  overflow: hidden;
-  text-align: center;
-  padding: 10px;
-  transition: transform 0.2s ease;
-}
-
-.product-label {
-  color: #000000;
-}
-
-.product-grid-catalog {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  background-color: #777;
-}
-
-.product-card h4 {
-  color: #000000;
-  font-size: 1.2em;
-  margin-bottom: 5px;
-  border: none;
-  padding: 0;
-}
-
-.product-card .price {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #000000;
-}
-
 .pagination {
   display: flex;
   justify-content: center;
@@ -263,102 +271,9 @@ a:hover {
   color: #000000;
 }
 
-.main-layout {
-  display: flex;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.content-area {
-  flex: 3;
-}
-
-.sidebar {
-  flex: 1;
-  background-color: #555;
-  padding: 20px;
-  border-radius: 5px;
-  height: fit-content;
-}
-
-.sidebar h3 {
-  margin-top: 0;
-}
-
-.sidebar-nav {
-  list-style: none;
-}
-
-.sidebar-nav li {
-  margin-bottom: 12px;
-}
-
-.sidebar-nav a {
-  font-size: 1.1em;
-}
-
-.footer {
-  background: rgba(51, 51, 51, 1);
-  width: 100%;
-  padding: 40px 0;
-  box-sizing: border-box;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  gap: 30px;
-}
-
-.footer-column {
-  flex: 1 1 280px;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  width: 100%;
-  max-width: 350px;
-}
-
-.footer-label {
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
-  white-space: nowrap;
-  text-align: right;
-  width: 110px;
-  flex-shrink: 0;
-  margin-top: 12px;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-}
-
-.footer-content .bubble {
-  display: block;
-  background: #b8976f;
-  color: #000000;
-  border-radius: 16px;
-  padding: 12px 20px;
-  font-size: 14px;
-  line-height: 1.4;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: left;
-}
-
+/* ==========================================================================
+   5. ДЕТАЛЬНАЯ СТРАНИЦА ТОВАРА
+   ========================================================================== */
 .product-detail {
   display: flex;
   gap: 60px;
@@ -374,6 +289,7 @@ a:hover {
   border: 1px solid #a67c52;
   padding: 20px;
   background: #b8976f;
+  border-radius: 30px;
 }
 
 .product-gallery .main-image img {
@@ -441,42 +357,9 @@ a:hover {
   gap: 25px;
 }
 
-.btn-buy {
-  background: #b8976f;
-  color: #000000;
-  border: none;
-  padding: 16px 34px;
-  font-size: 18px;
-  font-family: Gabriela;
-  border-radius: 28px;
-  cursor: pointer;
-}
-
-.btn-buy:hover {
-  opacity: 0.7;
-}
-
-.btn-cart {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 1px solid #a67c52;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.btn-cart img {
-  width: 30px;
-  height: 30px;
-}
-
-.btn-cart:hover {
-  opacity: 0.7;
-}
-
+/* ==========================================================================
+   6. КОРЗИНА (CART)
+   ========================================================================== */
 .cart-layout {
   display: flex;
   flex-wrap: wrap;
@@ -598,6 +481,32 @@ a:hover {
   cursor: pointer;
 }
 
+.cart-item__checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #a67c52;
+  border-radius: 4px;
+  background: #ffffff;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-item__checkbox input[type="checkbox"]:checked {
+  background-color: #a67c52;
+}
+
+.cart-item__checkbox input[type="checkbox"]:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  font-size: 14px;
+}
+
 .cart-footer-row {
   display: flex;
   justify-content: space-between;
@@ -649,36 +558,9 @@ a:hover {
   opacity: 1;
 }
 
-.cart-sidebar input[type="text"]::-webkit-input-placeholder {
-  color: rgba(240, 230, 210, 0.6);
-}
-
-.cart-item__checkbox input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 24px;
-  height: 24px;
-  border: 2px solid #a67c52;
-  border-radius: 4px;
-  background: #ffffff;
-  cursor: pointer;
-  position: relative;
-}
-
-.cart-item__checkbox input[type="checkbox"]:checked {
-  background-color: #a67c52;
-}
-
-.cart-item__checkbox input[type="checkbox"]:checked::after {
-  content: "✔";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #000000;
-  font-size: 14px;
-}
-
+/* ==========================================================================
+   7. УСЛУГИ (SERVICES)
+   ========================================================================== */
 .services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -723,6 +605,9 @@ a:hover {
   display: block;
 }
 
+/* ==========================================================================
+   8. ИНФОРМАЦИЯ И КОНТАКТЫ (INFO & CONTACTS)
+   ========================================================================== */
 .info-section,
 .contacts-section {
   padding: 20px 0 60px;
@@ -813,4 +698,254 @@ a:hover {
   width: 300px;
   height: auto;
   display: block;
+}
+
+/* ==========================================================================
+   9. ФУТЕР (FOOTER)
+   ========================================================================== */
+.footer {
+  background: rgba(51, 51, 51, 1);
+  width: 100%;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1 1 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.footer-label {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: right;
+  width: 110px;
+  flex-shrink: 0;
+  margin-top: 12px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.footer-content .bubble {
+  display: block;
+  background: #b8976f;
+  color: #000000;
+  border-radius: 16px;
+  padding: 12px 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* ==========================================================================
+   10. САЙДБАР И ОБЩИЕ КНОПКИ
+   ========================================================================= */
+.sidebar {
+  flex: 1;
+  background-color: #555;
+  padding: 20px;
+  border-radius: 5px;
+  height: fit-content;
+}
+
+.btn-buy {
+  background: #b8976f;
+  color: #000000;
+  border: none;
+  padding: 16px 34px;
+  font-size: 18px;
+  font-family: Gabriela;
+  border-radius: 28px;
+  cursor: pointer;
+}
+
+.btn-buy:hover {
+  opacity: 0.7;
+}
+
+.btn-cart {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid #a67c52;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-cart img {
+  width: 30px;
+  height: 30px;
+}
+
+/* ==========================================================================
+   11. АДАПТИВНОСТЬ (MEDIA QUERIES)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 0 50px;
+    margin: 100px auto;
+  }
+
+  .product-grid-catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contacts-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .product-detail {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .product-info {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .controls {
+    margin-top: 10px;
+  }
+
+  .product-grid,
+  .product-grid-catalog,
+  .services {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-section {
+    padding: 0 20px;
+    margin: 50px auto;
+  }
+
+  .about-section h2 {
+    font-size: 28px;
+  }
+
+  .cart-layout {
+    flex-direction: column;
+  }
+
+  .cart-sidebar {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .cart-item img {
+    margin-right: 0;
+  }
+
+  .cart-footer-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .info-text-block {
+    margin: 0;
+  }
+
+  .contacts-content__background {
+    width: 100%;
+    height: 200px;
+  }
+
+  .contacts-content img {
+    width: 100px;
+  }
+
+  .for-questions__info {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-label {
+    text-align: center;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 28px;
+  }
+
+  .btn-buy {
+    width: 100%;
+  }
+
+  .product-gallery .main-image {
+    padding: 10px;
+  }
+
+  .thumbnails img {
+    width: 60px;
+    height: 45px;
+  }
+
+  .contacts-content__background {
+    height: 100px;
+    width: auto;
+  }
 }
