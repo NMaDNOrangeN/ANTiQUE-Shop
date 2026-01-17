@@ -60,7 +60,6 @@ h2 {
   color: #ffffff;
   margin-bottom: 15px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #a67c52;
 }
 
 p {
@@ -119,7 +118,9 @@ p {
   height: 70px;
   width: 70px;
 }
-
+.mobile-menu {
+  display: none;
+}
 .search-capsule {
   display: flex;
   background-color: #000000;
@@ -254,10 +255,8 @@ p {
 
 .product-card {
   background-color: #b8976f;
-  border: 1px solid #a67c52;
-  border-radius: 5px;
+  border-radius: 1rem;
   overflow: hidden;
-  text-align: center;
   padding: 10px;
   transition: transform 0.2s ease;
 }
@@ -270,23 +269,23 @@ p {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 3px;
-  margin-bottom: 10px;
+  border-radius: 1rem;
   background-color: #777;
 }
 
 .product-card h4 {
   color: #000000;
   font-size: 1.2em;
-  margin-bottom: 5px;
   border: none;
   padding: 0;
+  margin: 0 1rem;
 }
 
 .product-card .price {
   font-size: 1.1em;
   font-weight: bold;
   color: #000000;
+  margin: 0 0 1rem 1rem;
 }
 
 .product-label {
@@ -296,7 +295,6 @@ p {
 .popular-section .product-card,
 .bestsellers-section .product-card,
 .catalog-section .product-card {
-  background-color: #b8976f;
   border: none;
   padding: 0;
 }
@@ -312,7 +310,6 @@ p {
 .catalog-section .product-card h4 {
   text-align: center;
   font-size: 20px;
-  margin-top: 12px;
 }
 
 .popular-section .product-card h4,
@@ -342,7 +339,10 @@ p {
   padding: 6px 12px;
   cursor: pointer;
 }
-
+.pagination button .active {
+  background: #b8976f;
+  color: #000000;
+}
 .pagination button:hover {
   background: #b8976f;
   color: #000000;
@@ -462,8 +462,8 @@ p {
   align-items: center;
   background-color: #b8976f;
   border: 1px solid #a67c52;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 1rem;
+  border-radius: 1rem;
   margin: 0;
 }
 
@@ -506,7 +506,7 @@ p {
   background-color: #b8976f;
   border: 1px solid #a67c52;
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 1rem;
   height: fit-content;
 }
 
@@ -599,7 +599,7 @@ p {
   gap: 15px;
   background-color: #b8976f;
   padding: 8px 25px;
-  border-radius: 25px;
+  border-radius: 1rem;
   flex: 0 1 auto;
   font-weight: bold;
   font-size: 18px;
@@ -617,7 +617,7 @@ p {
   color: #000000;
   border: none;
   padding: 12px 40px;
-  border-radius: 25px;
+  border-radius: 1rem;
   font-family: "Gabriela", serif;
   font-weight: bold;
   font-size: 18px;
@@ -860,7 +860,7 @@ p {
   padding: 16px 34px;
   font-size: 18px;
   font-family: Gabriela;
-  border-radius: 28px;
+  border-radius: 1rem;
   cursor: pointer;
 }
 
@@ -991,11 +991,6 @@ p {
     margin: 0;
   }
 
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
 
   .footer-label {
     text-align: center;
@@ -1007,7 +1002,6 @@ p {
   .page-title {
     font-size: 28px;
   }
-
   .btn-buy {
     width: 100%;
   }
@@ -1026,3 +1020,100 @@ p {
     width: auto;
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 16px;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .controls img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .controls {
+    gap: 18px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .product-grid,
+  .product-grid-catalog {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .product-card {
+    position: relative;
+    padding: 0;
+    background: none;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .product-card img {
+    height: 280px;
+    border-radius: 20px;
+  }
+
+  .product-card h4 {
+    position: absolute;
+    left: 16px;
+    bottom: 48px;
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .product-card .price {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .about-section {
+    display: none;
+  }
+  /*.popular-section {*/
+  /*  display: none;*/
+  /*}*/
+  .catalog-section {
+    display: none;
+  }
+  .bestsellers-section {
+    display: none;
+  }
+  .line {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+}
+
