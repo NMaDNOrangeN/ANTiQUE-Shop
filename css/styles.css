@@ -1042,6 +1042,8 @@ p {
   }
 
   .controls img {
+    display: flex;
+    align-items: center;
     width: 28px;
     height: 28px;
   }
@@ -1137,5 +1139,9 @@ p {
   footer {
     display: none;
   }
+}
+
+@media (min-width: 769px) {
+  display: flex;
 }
 
