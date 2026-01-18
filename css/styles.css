@@ -103,7 +103,9 @@ p {
 .main-nav a:hover {
   color: #b8976f;
 }
-
+.mobile-nav {
+  display: none;
+}
 .controls {
   display: flex;
   align-items: center;
@@ -1089,6 +1091,7 @@ p {
   }
   .mobile-menu {
     display: contents;
+    cursor: pointer;
   }
   .product-card .price {
     position: absolute;
@@ -1139,9 +1142,5 @@ p {
   footer {
     display: none;
   }
-}
-
-@media (min-width: 769px) {
-  display: flex;
 }
 
