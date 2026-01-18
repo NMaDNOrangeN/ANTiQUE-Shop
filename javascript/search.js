@@ -2,7 +2,7 @@ const searchBtn = document.getElementById("search-btn");
 const searchModal = document.getElementById("search-modal");
 const closeSearch = document.querySelector(".close-search");
 const mobileMenu = document.querySelector(".mobile-menu");
-const mainNav = document.querySelector(".main-nav")
+const mainNav = document.querySelector(".main-nav");
 
 searchBtn.addEventListener("click", () => {
   searchModal.style.display = "block";
@@ -29,7 +29,7 @@ window.addEventListener("resize", () => {
   if (window.innerWidth <= 768) {
     mainNav.style.display = "none";
   }
-})
+});
 
 window.addEventListener("click", (event) => {
   if (event.target === searchModal) {
